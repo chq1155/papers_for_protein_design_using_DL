@@ -5,7 +5,7 @@
 Inspired by Kevin Kaichuang Yang's [Machine-learning-for-proteins](https://github.com/yangkky/Machine-learning-for-proteins). In terms of the fast changing of **protein design in DL**, my colleagues and I started making this dynamic repository as a record of papers in this field for the newcomers like us.  
 Our notes of these papers are shared in a **[Zhihu Column](https://www.zhihu.com/column/c_1475864742820929537)** (simplified Chinese).  
 Mini protein, metalloprotein, antibody, peptide & molecule designs are included.  
-Heading [[2]](#2-model-based-design) follows a **"generator-predictor-optimizer" paradigm**, Heading [[3]](#3-function-to-scaffold), [[4]](#4scaffold-to-sequence)&[[6]](#6-function-to-structure) follow ["Inside-out" paradigm](https://www.nature.com/articles/nature19946)(*function-scaffold-sequence*) from [RosettaCommons](https://www.rosettacommons.org/), Heading [[5]](#5function-to-sequence)&[[7]](#7molecular-design-models) follow other ML/DL strategies.  
+Heading [[2]](#2-model-based-design) follows a **"generator-predictor-optimizer paradigm"**, Heading [[3]](#3-function-to-scaffold)&[[4]](#4scaffold-to-sequence) follow ["Inside-out" paradigm](https://www.nature.com/articles/nature19946)(*function-scaffold-sequence*) from [Baker lab](https://www.bakerlab.org/), Heading [[5]](#5function-to-sequence)&[[7]](#7molecular-design-models) follow other ML/DL strategies.  
 [Contributions](https://github.com/Peldom/papers_for_protein_design_using_DL/blob/main/CONTRIBUTING.md) are welcome!
 
 ## Menu
@@ -89,6 +89,10 @@ Zhangyang Gao, Cheng Tan, Stan Z. Li
 1. [PDB](https://www.rcsb.org/)
 2. [AlphaFoldDB](https://alphafold.ebi.ac.uk/)
 3. [PDBbind](http://www.pdbbind.org.cn/download.php)
+4. [CATH](https://www.cathdb.info/)
+5. [SCOP](https://scop.mrc-lmb.cam.ac.uk/)
+6. [CAEMO](https://www.cameo3d.org/)
+7. [CASP](https://predictioncenter.org/)
 
 #### 0.3.3 Protein Structure Datasets
 
@@ -126,6 +130,26 @@ Strokach, Alexey, and Philip M. Kim.
 **Deep generative models for peptide design**  
 Wan, Fangping, Daphne Kontogiorgos-Heintz, and Cesar de la Fuente-Nunez  
 [Digital Discovery (2022)](https://pubs.rsc.org/en/content/articlehtml/2022/dd/d1dd00024a)
+
+**Deep learning techniques have significantly impacted protein structure prediction and protein design**
+Robin Pearce, and Yang Zhang
+[Science Direct](https://www.sciencedirect.com/science/article/pii/S0959440X21000142) || 2021
+
+**Machine-learning-guided directed evolution for protein engineering**
+Kevin K. Yang, Zachary Wu, and Frances H. Arnold
+[Nature (2019)](https://www.nature.com/articles/s41592-019-0496-6) || 2019
+
+**Advances in machine learning for directed evolution**
+Bruce J Wittmann, Kadina E Johnston, Zachary Wu, and Frances H Arnold
+[Science Direct](https://www.sciencedirect.com/science/article/pii/S0959440X21000154) || 2021
+
+**Recent advances in de novo protein design: Principles, methods, and applications**
+Xingjie Pan, and Tanja Kortemme
+[journal of Biological Chemistry](https://www.jbc.org/article/S0021-9258(21)00336-7/fulltext) || 2021
+
+**The coming of age of de novo protein design**
+Po-Ssu Huang, Scott E. Boyken, and David Baker
+[Nature](https://www.nature.com/articles/nature19946) || 2016
 
 ## 2. Model-based design
 
@@ -319,15 +343,11 @@ Gao, Zhangyang, Cheng Tan, and Stan Li.
 
 **Generative De Novo Protein Design with Global Context**  
 Cheng Tan, Zhangyao Gao, Jun Xia and Stan Z. Li  
-[arXiv](https://arxiv.org/abs/2204.10673) || Apr 2022 || [code](https://github.com/chengtan9907/gca-generative-protein-design)
+[arXiv](https://arxiv.org/abs/2204.10673) || Apr 2022
 
 **Masked inverse folding with sequence transfer for protein representation learning**  
 Kevin K Yang, Hugh Yeh, Niccolò Zanichelli  
 [bioRxiv 2022.05.25.493516](https://www.biorxiv.org/content/10.1101/2022.05.25.493516v1) || [code](https://github.com/microsoft/protein-sequence-models) || [model](https://doi.org/10.1234/mifst)
-
-**Robust deep learning based protein sequence design using ProteinMPNN**  
-Justas Dauparas, Ivan Anishchenko, Nathaniel Bennett, Hua Bai, Robert J. Ragotte, Lukas F. Milles, Basile I. M. Wicky, Alexis Courbet, Robbert J. de Haas, Neville Bethel, Philip J. Y. Leung, Timothy F. Huddy, Sam Pellock, Doug Tischer, Frederick Chan, Brian Koepnick, Hannah Nguyen, Alex Kang, Banumathi Sankaran, Asim Bera, Neil P. King, David Baker  
-[bioRxiv 2022.06.03.494563](https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1.article-metrics) || [code](https://github.com/dauparas/ProteinMPNN)
 
 ### 4.6 GAN-based
 
@@ -356,6 +376,10 @@ Mmatthew McPartlon, Ben Lai, Jinbo Xu
 **Learning inverse folding from millions of predicted structures**  
 Chloe Hsu, Robert Verkuil, Jason Liu, Zeming Lin, Brian Hie, Tom Sercu, Adam Lerer, Alexander Rives  
 [bioRxiv (2022)](https://doi.org/10.1101/2022.04.10.487779) || [esm](https://github.com/facebookresearch/esm)  
+
+**Transformer protein language models are unsupervised structure learners**
+Roshan Rao, Joshua Meier, Tom Sercu, Sergey Ovchinnikov, Alexander Rives
+[ICLR (2021)](https://openreview.net/forum?id=fylclEqgvgd)
 
 ### 4.8 ResNet-based
 
@@ -585,7 +609,7 @@ Syrlybaeva, Raulia, and Eva-Maria Strauch.
 
 **Protein Structure and Sequence Generation with Equivariant Denoising Diffusion Probabilistic Models**  
 Namrata Anand, Tudor Achim  
-[GitHub (2022)](https://nanand2.github.io/proteins/)/[arXiv (2022)](https://arxiv.org/abs/2205.15019) || [our notes](https://zhuanlan.zhihu.com/p/520488133)
+[GitHub (2022)](https://nanand2.github.io/proteins/) || [our notes](https://zhuanlan.zhihu.com/p/520488133)
 
 ### 6.3 RoseTTAFold-based
 
